@@ -1,0 +1,41 @@
+  <!-- 底部 html start -->
+  <div id="footer">
+    <div class="footer_relate_link wrap1000">
+      <a href="#">商务合作</a>
+      <span>|</span>
+      <a href="#">意见反馈</a>
+      <span>|</span>  
+      <a href="#">关于我们</a>
+      <span>|</span>
+      <a href="#">新浪彩票</a>
+      <span>|</span>
+      <a href="#">新浪彩通</a>
+      <span>|</span>
+      <a href="#">新浪首页</a>
+    </div>
+    <div class="footer_copyright wrap1000">
+      Copyright ©新浪彩通 ALL Righhts Reserved
+      <span class="plr10"></span>
+      客服热线：400-690-0000
+    </div>
+    <div class="footer_sub_tips wrap1000">提醒：数据仅供参考，不作为最终投注依据</div>
+  </div> 
+  <!-- 底部 html start -->
+
+  <!-- 登录js -->
+  <script type="text/javascript" src="scripts/lib/lib_top.js"></script>
+  <script charset="utf-8" id="seajsnode" src="scripts/lib/lib_sea.js"></script>
+  <!-- 登录初始化 -->
+  <script type="text/javascript">
+  window.__SinaTopBar__.user.init(document.getElementById('SI_User'),{
+      // entry 默认为 account，各频道不一样，可向通行证@龚翼 申请
+      entry:'ent',
+      login_success:function(){
+          // 登录成功
+          window.__SinaFeedCard__.onLoginSuccess(SINA_OUTLOGIN_LAYER.getSinaCookie().uid, 30004);
+      },
+      logout_success:function(){
+          // 退出成功
+      }
+  });
+  </script>

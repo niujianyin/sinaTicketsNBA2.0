@@ -1,0 +1,54 @@
+@import url('./constant.less');
+
+/* CSS Document */
+
+/* CSS reset */
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0;}
+ul,li {list-style:none;}
+fieldset, img {border:none;}
+body {background:@bgcolor;color: @color;}
+body,button,input,select,textarea {font:12px/1.5 tahoma,arial,"Hiragino Sans GB","\5FAE\8F6F\96C5\9ED1";}  /*字体(unicode)：宋体(\5B8B\4F53)黑体(\9ED1\4F53)微软雅黑(\5FAE\8F6F\96C5\9ED1)*/
+input,select,textarea {font-size:100%;}   /* 默认并不集成父级的文字大小 */
+textarea {resize:none;}
+table {border-collapse:collapse;border-spacing:0; empty-cells: show;}
+button {cursor:pointer;}
+em {font-style:normal;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;}
+a {text-decoration:none;}
+a:focus {outline:none;}
+
+/* ie debug */
+img,li {vertical-align:top;}
+th {text-align:inherit;}
+iframe {display:block;}
+
+/* CSS3 渐进增强 */
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {border-color: rgba(242, 145, 73, 0.8) !important;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(242, 145, 73, 0.6);outline: 0 none;}
+a:hover, a:active, a:focus { /*text-decoration: underline;*/ -webkit-transition: color 0.1s ease; transition: color 0.1s ease;}
+
+/* clearfix */
+.clearfix:after{content:"\0020";display:block;height:0;clear:both;}
+.clearfix{zoom:1;}
+.clearit{clear:both;height:0;font-size:0;overflow:hidden;}
+
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.fn-text-overflow {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/*common部分开始*/
+body {font-family:"Microsoft Yahei", SimHei;} /*微软雅黑 */
+.simhei{font-family:Microsoft Simhei;} /*黑体 */
+.wrap {width:1000px; margin:0 auto;}
+.fl {float:left;}
+.fr {float:right;}
+.mt0 {margin-top:0!important;}
+.ml0 {margin-left:0!important;}
+.mt10 {margin-top:10px!important;}
+
+/*链接颜色*/
+a,a:visited { color: #4d555d;}
+a:hover {color:#2789e2;}
+
+a.linkBlue,
+a.linkBlue:visited {color:#2789e2!important;}
+a.linkBlue:hover {color:#2789e2!important;}

@@ -1,0 +1,43 @@
+@import url('./constant.less');
+@import url('./reset.less');
+@import url('./top.less');
+@import url('./top_account.less');
+
+// header.css
+.wrap1000{ width: 1000px; margin: 0 auto; position: relative;}
+.sina-top-bar-title{
+  float: left;
+  line-height: 40px;
+  padding-left: 20px;
+}
+#header{
+  background: url(../images/nav_bg.png) no-repeat center top #4c5f8a;
+  height: 60px;
+}
+#logo{ position: absolute; left: 0px; top: 0px; width: 230px; height: 60px;}
+#nav{ padding-left: 230px; width: 770px;}
+#nav li{ float: left; }
+#nav li a,#nav li a:visited{ float: left; padding: 0 36px; min-width: 72px; font-size: 18px; color: @colorWhite; height: 60px; line-height: 60px;}
+#nav li.selected a{ color: @colorBlue;}
+
+
+// footer.css
+#footer{
+  height: 140px;
+  background: @footerBgcolor;
+  box-sizing: border-box;
+  padding-top: 15px;
+  color: @colorWhite;
+}
+.footer_relate_link{ height: 50px; line-height: 50px; text-align: center; font-size: 14px;}
+.footer_relate_link a,.footer_relate_link a:visited{ color: @colorWhite;}
+.footer_relate_link a:hover{ color: @colorBlue;}
+.footer_relate_link span{ padding: 10px; color: @colorWhite;}
+
+.footer_copyright{ line-height: 18px; text-align: center; }
+.footer_sub_tips{ line-height: 18px; text-align: center; }
+.plr10{padding: 0 10px;}
+
+
+// container.css
+#container{}

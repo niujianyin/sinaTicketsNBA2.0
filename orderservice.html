@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NBA智能</title>
+  <link rel="import" href="htmls/commonHead.html?__inline">
+  <link rel="stylesheet" href="less/common.less" type="text/css" media="screen" />
+  <link rel="stylesheet" href="less/index.less" type="text/css" media="screen" />
+  <script type="text/javascript">
+    window.__navIdx = 3;
+  </script>
+</head>
+<body>
+  <!-- 头部 html start -->
+  <link rel="import" href="htmls/header.html?__inline">
+  <!-- 头部 html start -->
+
+  <!-- 内容主体 html start -->
+  <div id="container" style="height: 300px;">
+    订购服务
+  </div>
+  <!-- 内容主体 html end  -->
+  
+  <!-- 底部 html start -->
+  <link rel="import" href="htmls/footer.html?__inline">
+  <!-- 底部 html start -->
+  
+
+  <!-- doT template -->
+  <script src="scripts/lib/doT.min.js"></script>
+  <script type="text/template" id="indexTmpl">
+    <% if (it.length<=0) { %>
+      <div class="aohItem">无</div>
+    <% } else {
+      for (var i = 0, l = it.length; i < l; i++) { 
+        var hotel = it[i];
+    %>
+      <div class="aohItem">
+        <% if (hotel.selected) { %>
+          <div class="aohIcon aohIconSelect" data-hotelid=<%= hotel.id %>></div>
+        <% } else { %>
+          <div class="aohIconGray" data-hotelid=<%= hotel.id %>></div>
+        <% } %>
+        <%= hotel.name %>
+        <span><%= hotel.salesPerson %></span>
+      </div>
+    <% }}%>
+  </script>
+  <!-- 
+   * doT 调用
+   * var tmpl = $('#indexTmpl').html();
+   * var render = doT.template(tmpl);
+   * var html = render(data);
+   * $('#container').html(html);
+   *
+   -->
+
+  <!-- 
+   *百度图表echarts3.0
+   http://echarts.baidu.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts 
+  -->
+  <script type="text/javascript" src="scripts/lib/echarts.min.js"></script>
+
+  <script type="text/javascript">
+  seajs.config({
+    alias:{
+      common:"./scripts/common.js",
+      outcome:"./scripts/outcome.js",
+    }
+  });
+  seajs.use(["common","outcome"]);
+  </script>
+</body>
+</html>
