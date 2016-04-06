@@ -12,17 +12,51 @@
 <body>
   <!-- 头部 html start -->
   <link rel="import" href="htmls/header.html?__inline">
-  <!-- 头部 html start -->
+  <!-- 头部 html end -->
+  <!-- 日期控件 start-->
+  <link rel="stylesheet" href="less/bootstrap.min.less" type="text/css" media="screen" />
+  <link rel="stylesheet" href="less/datepicker3.less" type="text/css" media="screen" />
+  <script src="scripts/lib/bootstrap-datepicker.js"></script>
+  <script src="scripts/lib/bootstrap-datepicker.zh-CN.js"></script>
+
+  <!-- 日期控件 end -->
 
   <!-- 内容主体 html start -->
-  <div id="container" style="height: 300px;">
-    胜负预测
+  <div id="container">
+    <div class="forecast wrap1000">
+      <!-- 比赛日期 -->
+      <div class="forecast_date">
+        <!-- 回顾 -->
+        <div id="forecast_date_choose">
+          <div class="forecast_date_choose_txt">选择日期:</div>
+          <div class="input-group date">
+            <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- 比赛未开始 -->
+      <div class="forecast_matchbegin">
+        
+      </div>
+      <!-- 比赛进行中 -->
+      <div class="forecast_matching">
+        
+      </div>
+      <!-- 比赛已结束 -->
+      <div class="forecast_matchend">
+        
+      </div>
+      <!-- 比赛说明 -->
+      <div class="forecast_matchexplain">
+        
+      </div>
+    </div>
   </div>
   <!-- 内容主体 html end  -->
   
   <!-- 底部 html start -->
   <link rel="import" href="htmls/footer.html?__inline">
-  <!-- 底部 html start -->
+  <!-- 底部 html end -->
   
 
   <!-- doT template -->
