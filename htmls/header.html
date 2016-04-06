@@ -4,16 +4,13 @@
           <div class="sina-top-bar-title">
               NBA智能平台 —— 持续赢利的神器
           </div>
-          <div class="sina-top-bar-user TAP14" top-node-type="user" top-data="auto" id="SI_User">
-              <!-- <div class="message">
-                  <a href="#0" class="msg-link"  node-type="notification_btn">消息<i class="ac-icon ac-icon-message" style="visibility: hidden;" node-type="new_info_icon"></i></a>
-              </div> -->
+          <div class="sina-top-bar-user TAP14" id="SI_User">
               <div class="ac-rgst">
-                  <a target="_blank" href="https://login.sina.com.cn/signup/signup?entry=ent" class="msg-link" suda-uatrack="key=index_top&value=login_click">注册</a>
+                  <a target="_blank" href="https://login.sina.com.cn/signup/signup?entry=ent" class="msg-link">注册</a>
               </div>
               <div class="ac-login">
-                  <div node-type="outer" class="ac-login-cnt">
-                      <a href="#0" node-type="login_btn" class="ac-login-cnt"><span class="thumb"><img src="http://i.sso.sina.com.cn/images/login/thumb_default.png"></span><span class="log-links">登录</span></a>
+                  <div class="ac-login-cnt">
+                      <a href="#0" class="ac-login-cnt"><span class="thumb"><img src="http://i.sso.sina.com.cn/images/login/thumb_default.png"></span><span class="log-links">登录</span></a>
                   </div>
               </div>
           </div>
@@ -43,3 +40,36 @@
       $nav.find("li").removeClass('selected').eq(__navIdx).addClass('selected');
     })(window, undefined);
   </script>
+  <!-- 登录组件js -->
+  <script type="text/javascript">
+      window.__SinaTopBar__.user.init(document.getElementById('SI_User'),{
+        entry :'caitong',
+        login_success:function(){
+          afterLogin();
+        },
+        logout_success:function(){}
+      });
+      var sinaLoginLayer = SINA_OUTLOGIN_LAYER;
+      /* sinaLoginLayer.set('plugin', {
+         qqLogin : false            
+      }); */
+      
+      sinaLoginLayer.set('styles', {          
+        marginLeft: '-150px'
+      });
+                          
+      function middleLogin(msg) {
+        var UserPanel = SINA_USER_PANEL;
+        UserPanel.setOutLoginMiddle();
+        UserPanel.getOutLogin().show();
+        // 可添加提示
+        __SinaTopBar__.user.showTip(msg);
+      }
+
+      function checkLogin() {
+        if (sinaLoginLayer) {
+          return sinaLoginLayer.isLogin();
+        } 
+        return false;
+      }
+    </script>   
